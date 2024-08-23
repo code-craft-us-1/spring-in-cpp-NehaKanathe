@@ -6,7 +6,8 @@ namespace Statistics {
     {
         float average;
         float max;
-        float min;
+        float min;   
+       static  Stats ComputeStatistics(const std::vector<float>&);
+
     };
-    Stats ComputeStatistics(const std::vector<float>&);
 }
