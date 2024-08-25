@@ -1,6 +1,6 @@
 #include <vector>
 
-namespace Statistics {
+class Statistics {
     // define the Stats structure here. See the tests to infer its properties
     struct Stats
     {
@@ -9,4 +9,4 @@ namespace Statistics {
         float min;   
        static  Stats ComputeStatistics(const std::vector<float>&);
     };
-}
+};

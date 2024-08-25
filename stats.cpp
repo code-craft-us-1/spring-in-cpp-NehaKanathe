@@ -6,7 +6,7 @@
 #include <array>
 #include <algorithm>
 
-S Stats Stats::ComputeStatistics(const std::vector<float>&data)
+ static Stats Statistics::ComputeStatistics(const std::vector<float>&data)
    {
     Stats stats;
       if (data.empty()) {
