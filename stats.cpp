@@ -1,20 +1,23 @@
-#include "stats.h"
+
+#include <iostream>
 #include <vector>
 #include <numeric>
 #include <limits>
 #include <cmath>
 #include <array>
-#include <algorithm>
+#include "stats.h"
 
- static Stats Statistics::ComputeStatistics(const std::vector<float>&data)
-   {
+using namespace std;
+    Statistics::Stats Statistics::ComputeStatistics(const std::vector<float>& data)
+{
     Stats stats;
-      if (data.empty()) {
-            stats.average = std::nanf("");
-            stats.max = std::nanf("");
-            stats.min = std::nanf("");
-            return stats;
-        }
+    if (data.empty()) {
+        stats.average = std::nanf("");
+        stats.max = std::nanf("");
+        stats.min = std::nanf("");
+        return stats;
+    }
+
     float sum = std::accumulate(data.begin(), data.end(), 0.0f);
     stats.average = sum / data.size();
 
@@ -22,4 +25,5 @@
     stats.min = *std::min_element(data.begin(), data.end());
 
     return stats;
+    
 }
